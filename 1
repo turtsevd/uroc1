@@ -1,0 +1,10 @@
+import random
+
+balance = random.randint(0, 1000)
+used_profiles = random.sample(range(100, 500), 100)
+
+for _ in range(100):
+    profile = random.randint(100, 500)
+    if profile % 2 == 0 or used_profiles == profile:
+        print(f'Номер профиля {profile} пропускаем')
+        continue
